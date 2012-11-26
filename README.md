@@ -13,6 +13,7 @@ Ett WordPress Plugin/Widget som använder FreerideAPI för att hämta ut gratis 
 >Pluginet ger dig en Widget där alla inställningar görs, infomationen pressenteras sedan i den sidebar där widget placerades.
 
 ##Info
+```php
 	/*
 	Plugin Name: WP Hertz Freeride
 	Description: Get all available Freerides from Hertz
