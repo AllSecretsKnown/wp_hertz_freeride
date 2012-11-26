@@ -8,7 +8,7 @@ Ett WordPress Plugin/Widget som använder FreerideAPI för att hämta ut gratis 
 "Hertz Freerider är en tjänst som erbjuder gratis one-way-transfers från och till olika Hertz-stationer i Sverige."
 
 ##Hur använder man Pluginet?
->Klona repot, installera via WP-Admin
+>Klona repot, installera via WP-Admin, klart!
 
 >Pluginet ger dig en Widget där alla inställningar görs, infomationen pressenteras sedan i den sidebar där widget placerades.
 
