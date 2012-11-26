@@ -16,7 +16,7 @@ Ett WordPress Plugin/Widget som använder FreerideAPI för att hämta ut gratis 
 ```php
 	/*
 	Plugin Name: WP Hertz Freeride
-	Description: Get all available Freerides from Hertz
+	Description: Get all available Freerides from Hertz, by city
 	Version: 1.0
 	Author: Peter Persson
 	Author URI: https://github.com/AllSecretsKnown/wp_hertz_freeride
