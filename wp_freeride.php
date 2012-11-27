@@ -9,7 +9,7 @@ Author URI: https://github.com/AllSecretsKnown/wp_hertz_freeride
 */
 define( 'WP_TRAVEL_VERSION', '1.0' );
 
-include_once dirname( __FILE__ ) . '/includes/FreeriderAPI/FreeriderAPI.php';
+include_once dirname( __FILE__ ) . '/includes/ExtFreeriderAPI/FreeriderAPI.php';
 
 class WpHertzFreerideWidget extends WP_Widget {
 
@@ -64,13 +64,13 @@ class WpHertzFreerideWidget extends WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
-		$instance['title']  = wp_filter_nohtml_kses( $new_instance['title'] );
-		$instance['city']   = wp_filter_nohtml_kses( trim( $new_instance['city'] ) );
+		$instance['title'] = wp_filter_nohtml_kses( $new_instance['title'] );
+		$instance['city']  = wp_filter_nohtml_kses( trim( $new_instance['city'] ) );
 
 		//Make sure opt is one of two white listed options
-		if($instance['option'] === 'depart' OR $instance['option'] === 'dest'){
+		if ( $instance['option'] === 'depart' OR $instance['option'] === 'dest' ) {
 			$instance['option'] = $new_instance['option'];
-		}else{
+		} else {
 			$instance['option'] = 'depart';
 		}
 
@@ -83,7 +83,7 @@ class WpHertzFreerideWidget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		extract( $args );
 
-		try{
+		try {
 			$freerider_api = new freeriderAPI();
 
 			if ( $instance['option'] == 'depart' ) {
@@ -91,7 +91,7 @@ class WpHertzFreerideWidget extends WP_Widget {
 			} else {
 				$rides = $freerider_api->getDestination( $instance['city'] );
 			}
-		}catch(Exception $e){
+		} catch ( Exception $e ) {
 			exit();
 		}
 
